@@ -124,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_percent:
                 rememberFirst();
                 Operation = "%";
+                result = first / 100;
+                textView.setText(result.toString());
                 break;
             case R.id.btn_plus_minus:
                 rememberFirst();
@@ -150,10 +152,7 @@ public class MainActivity extends AppCompatActivity {
                         result = first / second;
                         textView.setText(result.toString());
                         break;
-                    case "%":
-                        result = first / 100;
-                        textView.setText(result.toString());
-                        break;
+
                 }
         }
         isOperationClick = true;
