@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
         btnNext = findViewById(R.id.btn_next);
 
         findViewById(R.id.btn_next).setOnClickListener(view -> {
+            String text = textView.getText().toString();
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            intent.putExtra("key", text);
             startActivity(intent);
 
         });
