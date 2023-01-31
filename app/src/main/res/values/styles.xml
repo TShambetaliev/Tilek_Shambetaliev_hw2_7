@@ -25,4 +25,12 @@
         <item name="backgroundTint"> @color/dark_gray</item>
     </style>
 
+    <style name="Base.BTN" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
 </resources>

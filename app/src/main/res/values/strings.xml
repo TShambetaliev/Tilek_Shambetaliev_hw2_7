@@ -20,5 +20,12 @@
     <string name="zero">0</string>
     <string name="dot">.</string>
     <string name="equals">=</string>
+    <string name="current_policies">Current Policies</string>
+    <string name="brand">Brand</string>
+    <string name="origin_country">Origin Country</string>
+    <string name="product_category">Product Category</string>
+    <string name="policy">Policy</string>
+    <string name="policies">Policies</string>
+    <string name="all_close">All close</string>
 
 </resources>

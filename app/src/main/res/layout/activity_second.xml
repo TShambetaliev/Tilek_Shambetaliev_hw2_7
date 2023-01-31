@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="@color/dark_white">
+
+    <FrameLayout
+        android:id="@+id/stat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/dark_gray"
+        app:layout_constraintBottom_toTopOf="@+id/polis_contein"
+        app:layout_constraintTop_toTopOf="parent">
+    </FrameLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/polis_contein"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigator">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_all_close"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/red"
+            app:cornerRadius="40dp"
+            android:text="@string/all_close"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/policies"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_policy"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/current_pol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_policies"
+            android:textSize="30sp"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_all_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_policy"
+            android:text="@string/policy"
+            app:layout_constraintBottom_toTopOf="@+id/product"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+           style="@style/Base.BTN"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/product"
+            android:text="@string/product_category"
+            app:layout_constraintBottom_toTopOf="@+id/origin_count"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/Base.BTN"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/origin_count"
+            android:text="@string/origin_country"
+            app:layout_constraintBottom_toTopOf="@+id/brand"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/Base.BTN"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/brand"
+            android:text="@string/brand"
+            app:layout_constraintBottom_toTopOf="@+id/current_pol"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="50dp"
+            style="@style/Base.BTN"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/navigator"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white">
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

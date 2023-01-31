@@ -1,7 +1,9 @@
 package com.example.tilek_shambetaliev_hw2_7;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,11 +16,19 @@ public class MainActivity extends AppCompatActivity {
     private Double first, second, result;
     private Boolean isOperationClick;
     String Operation;
+    Button btnNext;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.text_views);
+        btnNext = findViewById(R.id.btn_next);
+
+        findViewById(R.id.btn_next).setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            startActivity(intent);
+
+        });
     }
 
     public void onNumberClick(View view) {
@@ -101,6 +111,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         isOperationClick = false;
+        btnNext.setVisibility(View.INVISIBLE);
+
     }
 
     public void onOperationClick(View view) {
@@ -134,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(result.toString());
                 break;
             case R.id.btn_equals:
+                btnNext.setVisibility(View.VISIBLE);
                 second = Double.valueOf(textView.getText().toString());
                 switch (Operation) {
                     case "+":
@@ -161,4 +174,5 @@ public class MainActivity extends AppCompatActivity {
     public void rememberFirst() {
         first = Double.valueOf(textView.getText().toString());
     }
+
 }

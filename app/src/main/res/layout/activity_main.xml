@@ -13,6 +13,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/container">
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="111dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/orange"
+            android:text="NEXT"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="20dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible"/>
+
         <TextView
             android:id="@+id/text_views"
             android:layout_width="match_parent"
